@@ -24,7 +24,7 @@ alias gl='git --no-pager log --oneline --decorate --graph -n 20'
 
 
 # Redis
-alias redis='docker run -d --name redis -p 6379:6379 redis:5-alpine'
+alias redis='docker run -d --name redis -p 127.0.0.1:6379:6379 redis:5-alpine'
 
 # Arango
-alias arango='docker run -d --name arangodb -e ARANGO_NO_AUTH=1 -p 8529:8529 arangodb:3.7'
+alias arango='docker run -d --name arangodb -e ARANGO_NO_AUTH=1 -p 127.0.0.1:8529:8529 arangodb:3.7'
