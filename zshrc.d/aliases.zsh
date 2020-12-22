@@ -20,8 +20,9 @@ alias h=history
 alias vir='vim -R'
 
 # Git aliases
-alias gl='git --no-pager log --oneline --decorate --graph -n 20'
-
+gl () {
+  git --no-pager log --oneline --decorate --graph -n ${1:20}
+}
 
 # Redis
 alias redis='docker run -d --name redis -p 127.0.0.1:6379:6379 redis:5-alpine'
