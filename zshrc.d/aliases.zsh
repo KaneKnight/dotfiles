@@ -20,8 +20,9 @@ alias h=history
 alias vir='vim -R'
 
 # Git aliases
+unalias gl
 gl () {
-  git --no-pager log --oneline --decorate --graph -n ${1:20}
+  git --no-pager log --oneline --decorate --graph -n ${1:-20}
 }
 
 # Redis
