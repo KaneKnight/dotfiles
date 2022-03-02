@@ -16,3 +16,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " In Git commit messages, also colour the 51st column (for titles)
 autocmd FileType gitcommit set colorcolumn+=51
 autocmd FileType gitcommit set colorcolumn+=73
+
+" Capital W also saves
+command! W  write
+
