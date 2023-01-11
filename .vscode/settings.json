@@ -1,0 +1,42 @@
+{
+    // Format
+    "editor.formatOnSave": true,
+    // Go Modules
+    "go.toolsEnvVars": {
+        "GO111MODULE": "on"
+    },
+    // Formatter
+    "go.useLanguageServer": true,
+    "go.alternateTools": {
+        "go-langserver": "gopls"
+    },
+    "go.delveConfig": {
+        "debugAdapter": "dlv-dap",
+    },
+    "go.vetOnSave": "package",
+    "go.lintOnSave": "package",
+    "go.testTimeout": "300s",
+    "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "go.buildFlags": [
+        "-tags=acceptance,debugmain,workflow",
+    ],
+    //"go.testTags": "debugmain",
+    // Go language server
+    "gopls": {
+        "formatting.gofumpt": true,
+        "ui.diagnostic.analyses": {
+            "unusedparams": true,
+            "nilness": true,
+            "unusedwrite": true,
+        },
+    },
+    // TabNine
+    "tabnine.experimentalAutoImports": true,
+}
