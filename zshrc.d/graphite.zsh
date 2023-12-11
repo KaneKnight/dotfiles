@@ -1,0 +1,3 @@
+# graphite.zsh
+
+gt completion
