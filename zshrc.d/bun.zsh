@@ -1,7 +1,6 @@
 # bun.zsh
 
 if [ -d "$HOME/.bun" ] ; then
-    echo "bun"
     # bun completions
     [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
