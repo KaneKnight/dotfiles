@@ -37,6 +37,4 @@
             "unusedwrite": true,
         },
     },
-    // TabNine
-    "tabnine.experimentalAutoImports": true,
 }

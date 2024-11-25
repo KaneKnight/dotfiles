@@ -10,13 +10,13 @@ setopt inc_append_history
 setopt share_history
 
 # zplug
-source ~/.zplug/init.zsh
+source ~/workbench/dotfiles/init.zsh
 
 # Kane
 zplug KaneKnight/dotfiles, use:"zshrc.d/*", defer:2
 zplug "themes/agnoster", from:oh-my-zsh, as:theme
 zplug "agkozak/zsh-z"
-zplug "plugins/git",   from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 
 # [zplug] load plugins
 zplug load
