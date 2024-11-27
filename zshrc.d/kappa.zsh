@@ -1,1 +1,1 @@
-export GOPRIVATE=github.com/kappappay
+#export GOPRIVATE=github.com/kappappay
