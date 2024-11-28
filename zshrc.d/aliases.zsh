@@ -28,4 +28,4 @@ gl () {
 # Lowercase uuid on mac
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
-alias allmain='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;'
+alias allmain='find ~/workbench -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} switch main \; -exec git -C {} pull \;'
