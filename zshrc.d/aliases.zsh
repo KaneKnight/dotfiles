@@ -29,3 +29,11 @@ gl () {
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 alias allmain='find ~/workbench -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} switch main \; -exec git -C {} pull \;'
+
+alias kcd='kubectl --context=arn:aws:eks:eu-west-1:308172169369:cluster/kappa-dev-eks-cluster'
+alias kcq='kubectl --context=arn:aws:eks:eu-west-1:308172169369:cluster/kappa-qa-eks-cluster'
+alias kcp='kubectl --context=arn:aws:eks:eu-west-1:308172169369:cluster/kappa-prod-eks-cluster'
+
+alias jql='jq -c '\''[.time, .level, .package, .function, .error, .message]'\'''
+alias jqlr='jq -c '\''[.time, .level, .caller, .method, .path, .status, .request_id, .error, .message]'\'''
+alias jqlv='jq -c '\''[.time, .level, .trace.id, .package, .function, .caller, .user_id, .entity_id, .transaction_id, .error, .message]'\'''
