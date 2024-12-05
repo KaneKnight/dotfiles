@@ -20,10 +20,7 @@ alias h=history
 alias vir='vim -R'
 
 # Git aliases
-unalias gl
-gl () {
-  git --no-pager log --oneline --decorate --graph -n ${1:-20}
-}
+alias gl='(){ git --no-pager log --oneline --decorate --graph -n ${1:-20} ;}'
 
 # Lowercase uuid on mac
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'

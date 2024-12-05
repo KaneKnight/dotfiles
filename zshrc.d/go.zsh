@@ -10,9 +10,9 @@ if [ -d "${HOME}/root/opt/go/bin" ]; then
 fi
 
 # if installed via brew install
-if [ -f "/usr/local/bin/go" ]; then
+if [ -f "/opt/homebrew/bin/go" ]; then
 	echo "installed go via brew"
-	export GOROOT="/usr/local/opt/go/libexec"
+	export GOROOT="/usr/local/opt/go/1.23.3/libexec"
 	export GOPATH="${HOME}/go"
 
 	PATH="${GOROOT}/bin:${GOPATH}/bin${PATH:+:${PATH}}"

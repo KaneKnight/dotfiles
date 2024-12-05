@@ -1,5 +1,8 @@
 # .zshrc
 
+autoload -Uz compinit
+compinit
+
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
@@ -9,18 +12,18 @@ setopt hist_ignore_all_dups
 setopt inc_append_history
 setopt share_history
 
-# zplug
-source ~/workbench/dotfiles/init.zsh
 
 # Kane
-zplug KaneKnight/dotfiles, use:"zshrc.d/*", defer:2
-zplug "themes/agnoster", from:oh-my-zsh, as:theme
-zplug "agkozak/zsh-z"
-zplug "plugins/git", from:oh-my-zsh
+for file in ~/workbench/dotfiles/zshrc.d/*; do
+    source "$file"
+done
 
-# [zplug] load plugins
-zplug load
+# theme
+source ~/workbench/dotfiles/themes/agnoster-zsh-theme/agnoster.zsh-theme
 
+# plugin
+source ~/workbench/dotfiles/plugins/z/z.plugin.zsh
+source ~/workbench/dotfiles/plugins/git/git.plugin.zsh
 
 # Drop duplicates from PATH
 typeset -aU path
