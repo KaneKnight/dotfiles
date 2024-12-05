@@ -12,7 +12,7 @@ fi
 # if installed via brew install
 if [ -f "/opt/homebrew/bin/go" ]; then
 	echo "installed go via brew"
-	export GOROOT="/usr/local/opt/go/1.23.3/libexec"
+	export GOROOT="$(brew --prefix golang)/libexec"
 	export GOPATH="${HOME}/go"
 
 	PATH="${GOROOT}/bin:${GOPATH}/bin${PATH:+:${PATH}}"
